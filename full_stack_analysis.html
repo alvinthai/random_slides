@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="remark,remarkjs,markdown,slideshow,presentation" />
+    <meta name="description" content="A simple, in-browser, markdown-driven slideshow tool." />
+    <title>Full Stack Analysis</title>
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif);
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Abel);
+
+      body {
+        font-family: 'Abel';
+      }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: 400;
+        margin-bottom: 0;
+      }
+      .remark-slide-content h1 { font-size: 3em; }
+      .remark-slide-content h2 { font-size: 2em; }
+      .remark-slide-content h3 { font-size: 1.6em; }
+      .footnote {
+        position: absolute;
+        bottom: 3em;
+      }
+      li p { line-height: 1.25em; }
+      .red { color: #fa0000; }
+      .large { font-size: 2em; }
+      a, a > code {
+        color: rgb(249, 38, 114);
+        text-decoration: none;
+      }
+      code {
+        background: #e7e8e2;
+        border-radius: 5px;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      .remark-code-line-highlighted     { background-color: #373832; }
+      .pull-left {
+        float: left;
+        width: 47%;
+      }
+      .pull-right {
+        float: right;
+        width: 47%;
+      }
+      .pull-right ~ p {
+        clear: both;
+      }
+      #slideshow .slide .content code {
+        font-size: 0.8em;
+      }
+      #slideshow .slide .content pre code {
+        font-size: 0.9em;
+        padding: 15px;
+      }
+      .inverse {
+        background: #272822;
+        color: #777872;
+        text-shadow: 0 0 20px #333;
+      }
+      .inverse h1, .inverse h2 {
+        color: #f3f3f3;
+        line-height: 0.8em;
+      }
+
+      /* Slide-specific styling */
+      #slide-inverse .footnote {
+        bottom: 12px;
+        left: 20px;
+      }
+      #slide-how .slides {
+        font-size: 0.9em;
+        position: absolute;
+        top:  151px;
+        right: 140px;
+      }
+      #slide-how .slides h3 {
+        margin-top: 0.2em;
+      }
+      #slide-how .slides .first, #slide-how .slides .second {
+        padding: 1px 20px;
+        height: 90px;
+        width: 120px;
+        -moz-box-shadow: 0 0 10px #777;
+        -webkit-box-shadow: 0 0 10px #777;
+        box-shadow: 0 0 10px #777;
+      }
+      #slide-how .slides .first {
+        background: #fff;
+        position: absolute;
+        top: 20%;
+        left: 20%;
+        z-index: 1;
+      }
+      #slide-how .slides .second {
+        position: relative;
+        background: #fff;
+        z-index: 0;
+      }
+
+      /* Two-column layout */
+      .left-column {
+        color: #000;
+        width: 20%;
+        height: 92%;
+        float: left;
+      }
+        .left-column h2:last-of-type, .left-column h3:last-child {
+          color: #000;
+        }
+      .right-column {
+        width: 75%;
+        float: right;
+        padding-top: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+name: inverse
+layout: true
+class: center, middle, inverse
+---
+#Full Stack Analysis
+---
+layout: false
+.left-column[
+  ### The Analysis Stack
+]
+.right-column[
+**Step 1**: Sniffing out opportunity <br><font size="3">&emsp;.red[**Skill:** Product sense]</font>
+
+**Step 2:** Does the data exist? <br><font size="3">&emsp;.red[**Skill:** Attention to detail]</font>
+
+**Step 3:** Data Exploration <br><font size="3">&emsp;.red[**Skill:** Strategic thinking]</font>
+
+**Step 4:** Storytelling <br><font size="3">&emsp;.red[**Skill:** Empathy]</font>
+
+**Step 5:** Getting buy-in <br><font size="3">&emsp;.red[**Skill:** Persuasion]</font>
+
+**Step 6:** Ship & Measure <br><font size="3">&emsp;.red[**Skill:** Perseverance]</font>
+
+**Step 7:** Pipelining <br><font size="3">&emsp;.red[**Skill:** Tech stack]</font>
+]
+---
+template: inverse
+
+## Step 1: Sniffing Out Opportunity
+---
+.left-column[
+  ### Product Sense
+]
+.right-column[
+1. Use your product a lot!
+  - <font size="3">Test flows</font>
+  - <font size="3">Assume everything is broken or could be made better</font>
+
+2. In the simplest terms possible, state the opportunity
+
+3. Ask yourself, which user problem am i trying to solve?
+
+4. Ask yourself, how many users do I think are potentially affected by this problem?
+]
+---
+template: inverse
+
+## Step 2: Where's the Data?
+---
+.left-column[
+  ### Attention to Detail
+]
+.right-column[
+1. Learn how to check whether logging exists
+
+2. Reach out to peers/engineers
+
+3. If you need to build logging, grab some people & think through the best design
+
+4. If the data is dirty & unuseable, don't be afraid to get your hands dirty & get it in a usable state. You'll probably learn a few things along the way
+
+5. Run sanity checks before you start your analysis or build pipelines
+]
+---
+template: inverse
+
+## Step 3: Data Exploration
+---
+.left-column[
+  ### Strategic Thinking
+]
+.right-column[
+1. Take a few hours with a whiteboard to map out the problem before you start the analysis. It's always better to grab another DS/Product person to bounce ideas off
+
+2. Clearly define the problem you are trying to solve
+
+3. Define how you measure the problem (metrics & dimensions)
+
+4. Write out all of the hypothesis you want to investigate
+
+5. Rank your hypothesis (0/1) - nice to have / must have
+
+6. Persevere until you have the truth
+
+7. Ask yourself what the potential objections might be?
+]
+---
+template: inverse
+
+## Step 4: Storytelling
+---
+.left-column[
+  ### Empathy
+  <font size='4'>(with the reader)</font>
+]
+.right-column[
+1. What are the 3-4 most important things I want the reader to take away?
+
+2. What are the 1-2 things that the engineers should build as a result?
+
+3. Who are the users this analysis is solving for? How can I best categorize/explain who they are?
+
+4. Will someone who has little context understand my work?
+
+5. Is this piece of information absolutely necessary for someone to understand? Or is it a "Nice to Know?"
+
+6. If I had to change this graphic to make it more understandable, what would I do?
+]
+---
+template: inverse
+
+## Step 5: Getting Buy-In
+---
+.left-column[
+  ### Persuasion
+]
+.right-column[
+1. Your job as a data scientist does not stop at analysis
+
+2. Set up time for key stakeholders to go through the analysis
+
+3. Ask the decision makers directly if they are bought in
+
+4. If they aren't, ask them what it will take to get them bought in
+
+5. If they are, ask them when the product work will be scheduled
+]
+---
+template: inverse
+
+## Step 6: Ship & Measure
+---
+.left-column[
+  ### Perserverance
+]
+.right-column[
+1. Find the truth (not what you want to see)
+
+2. If the results are good, or if the results are bad, dig into the data anyway.
+
+3. What other opportunities have become apparent?
+]
+---
+template: inverse
+
+## Step 7: Pipelining
+---
+.left-column[
+  ### Tech Stack
+]
+.right-column[
+1. Ask yourself whether this is a one-off, or, whether you'll need to use this data again?
+
+2. Build for the future (before you lose context)
+
+3. It's easier to click around on a dashboard than it is to write queries
+
+4. Setup alerts (if you can)
+]
+---
+name: last-page
+template: inverse
+
+## That's all folks!
+
+Slideshow created using [remark](http://github.com/gnab/remark).
+    </textarea>
+    <script src="downloads/remark-latest.min.js"></script>
+    <script>
+      var hljs = remark.highlighter.engine;
+    </script>
+    <script src="remark.language.js"></script>
+    <script>
+      var slideshow = remark.create({
+          highlightStyle: 'monokai',
+          highlightLanguage: 'remark',
+          highlightLines: true
+        }) ;
+    </script>
+    <script>
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-44561333-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script');
+        ga.src = 'https://ssl.google-analytics.com/ga.js';
+        var s = document.scripts[0];
+        s.parentNode.insertBefore(ga, s);
+      }());
+    </script>
+  </body>
+</html>
